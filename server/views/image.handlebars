@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Seedshot</title>
+    <link href="/public/reset.css" rel="stylesheet"></link>
+    <link href="/public/main.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='push'></div>
+      {{#if infoHash}}
+
+      <div class="spinner" id="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+        <img id="downloaded" data-info-hash="{{infoHash}}"/>
+      {{else}}
+        <img id="seeded" src="data:image/jpeg;base64,{{base64}}"/>
+      {{/if}}
+      <p class='status'></p>
+      <div class='push'></div>
+    </div>
+
+    <footer>
+      Two Bucks © 2016
+    </footer>
+
+  </body>
+  <script type='text/javascript' src="/public/bundle.js"></script>
+</html>
